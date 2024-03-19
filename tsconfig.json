@@ -100,5 +100,5 @@
   },
   "include": [
     "src/**/*.ts"
-  ],
+, "src/infrastructure/api/__tests__/product.e2e.spec.tsa"  ],
 }

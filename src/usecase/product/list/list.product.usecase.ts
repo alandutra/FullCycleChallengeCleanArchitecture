@@ -8,13 +8,13 @@ import {
 
 export default class ListProductUseCase {
   private productRepository: ProductRepositoryInterface;
-  constructor(CustomerRepository: ProductRepositoryInterface) {
-    this.productRepository = CustomerRepository;
+  constructor(ProductRepository: ProductRepositoryInterface) {
+    this.productRepository = ProductRepository;
   }
 
   async execute(input: InputListProductDto): Promise<OutputListProductDto> {
-    const customers = await this.productRepository.findAll();
-    return OutputMapper.toOutput(customers);
+    const products = await this.productRepository.findAll();
+    return OutputMapper.toOutput(products);
   }
 }
 
